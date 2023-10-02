@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<a href="https://gist.github.com/Falderian/0797206a7d7b59d9e98d5ecd462482ef" target="_blank">Doctors appointment task</a> f a test task for NodeJS backend developer</p>
 
 ## Installation
 
