@@ -4,16 +4,14 @@ import { UpdateDoctorDto } from './dto/update-doctor.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Doctor } from './entities/doctor.entity';
 import { Repository } from 'typeorm';
-import { Slot } from './entities/slots.entities';
-import { randomDate } from 'src/utils/utils';
+// import { Slot } from '../slots/entities/slots.entities';
+// import { randomDate } from 'src/utils/utils';
 
 @Injectable()
 export class DoctorsService {
   constructor(
     @InjectRepository(Doctor)
-    private doctorsRepository: Repository<Doctor>,
-    @InjectRepository(Slot)
-    private slotsRepository: Repository<Slot>,
+    private doctorsRepository: Repository<Doctor>, // @InjectRepository(Slot) private slotsRepository: Repository<Slot>,
   ) {}
 
   async create(createDoctorDto: CreateDoctorDto) {
@@ -61,11 +59,11 @@ export class DoctorsService {
     const limit = +(Math.random() * 100).toFixed();
     const doc = await this.findOne(doctorId);
     for (let i = 0; i < limit; i++) {
-      await this.slotsRepository.save({
-        date: randomDate(),
-        doctor: doc,
-        isTaken: false,
-      });
+      // await this.slotsRepository.save({
+      //   date: randomDate(),
+      //   doctor: doc,
+      //   isTaken: false,
+      // });
     }
   }
 }

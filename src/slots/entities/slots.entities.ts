@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
   Unique,
 } from 'typeorm';
-import { Doctor } from './doctor.entity';
+import { Doctor } from '../../doctors/entities/doctor.entity';
 import { User } from '../../users/entities/user.entity';
 import { Transform } from 'class-transformer';
 

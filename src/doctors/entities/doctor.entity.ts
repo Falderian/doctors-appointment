@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
   Unique,
 } from 'typeorm';
-import { Slot } from './slots.entities';
+import { Slot } from '../../slots/entities/slots.entities';
 
 @Entity()
 @Unique(['name', 'spec'])
